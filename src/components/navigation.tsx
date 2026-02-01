@@ -8,6 +8,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Menu, X, Phone, MessageCircle } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import { FaWhatsapp } from "react-icons/fa"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -32,11 +33,11 @@ export function Navigation() {
   }, [])
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/919876543210", "_blank")
+    window.open("https://wa.me/919844661119", "_blank")
   }
 
   const handleCallClick = () => {
-    window.open("tel:+919876543210")
+    window.open("tel:+919844661119")
   }
 
   return (
@@ -56,11 +57,11 @@ export function Navigation() {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
               <img 
-                src="/logo.png" 
-                alt="Royal Estates Logo" 
+                src="/logo.jpeg" 
+                alt="Sreeyan Developers Logo" 
                 className="w-10 h-10 rounded-lg"
               />
-              <span className="font-bold text-xl text-foreground">Royal Estates</span>
+              <span className="font-bold text-xl text-foreground">Sreeyan Developers</span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -97,7 +98,7 @@ export function Navigation() {
                 onClick={handleWhatsAppClick}
                 className="bg-green-600 hover:bg-green-700 flex items-center space-x-2"
               >
-                <MessageCircle className="w-4 h-4" />
+                <FaWhatsapp className="w-4 h-4" />
                 <span>WhatsApp</span>
               </Button>
             </div>

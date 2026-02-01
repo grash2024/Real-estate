@@ -23,6 +23,7 @@ import {
   Wifi
 } from "lucide-react"
 import Link from "next/link"
+import { FaWhatsapp } from "react-icons/fa"
 
 export default function ProjectsPage() {
   const [searchTerm, setSearchTerm] = useState("")
@@ -30,7 +31,7 @@ export default function ProjectsPage() {
   const [selectedStatus, setSelectedStatus] = useState("all")
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/919876543210", "_blank")
+    window.open("https://wa.me/919844661119", "_blank")
   }
 
   const projects = [
@@ -156,7 +157,7 @@ export default function ProjectsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-amber-50 to-orange-50">
+      <section className="relative py-20 bg-gradient-to-br from-amber-50 to-amber-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-4xl mx-auto text-center"
@@ -228,7 +229,7 @@ export default function ProjectsPage() {
               >
                 <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
                   <div className="relative">
-                    <div className="w-full h-48 bg-gradient-to-br from-amber-100 to-orange-100" />
+                    <div className="w-full h-48 bg-gradient-to-br from-amber-100 to-amber-100" />
                     <Badge className={`absolute top-4 right-4 ${getStatusColor(project.status)}`}>
                       {getStatusText(project.status)}
                     </Badge>
@@ -286,7 +287,7 @@ export default function ProjectsPage() {
                         className="flex-1"
                         onClick={handleWhatsAppClick}
                       >
-                        <MessageCircle className="w-4 h-4 mr-1" />
+                        <FaWhatsapp className="w-4 h-4 mr-1" />
                         Enquire
                       </Button>
                       <Button size="sm" variant="outline" asChild>
@@ -310,7 +311,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-600 to-orange-600">
+      <section className="py-20 bg-gradient-to-r from-amber-600 to-amber-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -325,12 +326,12 @@ export default function ProjectsPage() {
               Our experts are here to help you find the perfect property that matches your needs and budget
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" onClick={() => window.open("tel:+919876543210")}>
+              <Button size="lg" variant="secondary" onClick={() => window.open("tel:+919844661119")}>
                 <Phone className="mr-2 w-5 h-5" />
                 Call Our Experts
               </Button>
               <Button size="lg" className="bg-white text-amber-600 hover:bg-gray-100" onClick={handleWhatsAppClick}>
-                <MessageCircle className="mr-2 w-5 h-5" />
+                <FaWhatsapp className="mr-2 w-5 h-5" />
                 WhatsApp Us
               </Button>
             </div>

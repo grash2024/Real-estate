@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { FaWhatsapp } from "react-icons/fa";
 import { 
   Building2, 
   Users, 
@@ -21,7 +22,7 @@ import Link from "next/link"
 
 export default function AboutPage() {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/919876543210", "_blank")
+    window.open("https://wa.me/919844661119", "_blank")
   }
 
   const stats = [
@@ -92,7 +93,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-amber-50 to-orange-50">
+      <section className="relative py-20 bg-gradient-to-br from-amber-50 to-amber-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-4xl mx-auto text-center"
@@ -101,7 +102,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
-              About Royal Estates
+              About Sreeyan Developers
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               Building dreams and creating lasting homes for over 15 years. 
@@ -158,7 +159,7 @@ export default function AboutPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Founded in 2009, Royal Estates began with a simple yet powerful vision: 
+                  Founded in 2009, Sreeyan Developers began with a simple yet powerful vision: 
                   to create homes that people would love to live in. We started as a small 
                   team with big dreams, focused on understanding the needs of first-time 
                   home buyers.
@@ -182,7 +183,7 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="w-full h-96 bg-gradient-to-br from-amber-100 to-orange-100 rounded-lg" />
+              <div className="w-full h-96 bg-gradient-to-br from-amber-100 to-amber-100 rounded-lg" />
             </motion.div>
           </div>
         </div>
@@ -238,7 +239,7 @@ export default function AboutPage() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Leadership Team</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Meet the visionaries behind Royal Estates
+              Meet the visionaries behind Sreeyan Developers
             </p>
           </motion.div>
 
@@ -252,7 +253,7 @@ export default function AboutPage() {
                 viewport={{ once: true }}
               >
                 <Card className="text-center overflow-hidden">
-                  <div className="w-full h-48 bg-gradient-to-br from-amber-100 to-orange-100" />
+                  <div className="w-full h-48 bg-gradient-to-br from-amber-100 to-amber-100" />
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold mb-1">{leader.name}</h3>
                     <Badge variant="secondary" className="mb-3">{leader.position}</Badge>
@@ -308,7 +309,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-600 to-orange-600">
+      <section className="py-20 bg-gradient-to-r from-amber-600 to-amber-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -317,18 +318,18 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Join the Royal Estates Family
+              Join the Sreeyan Developers Family
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Experience the difference of working with a developer who truly cares about your dreams
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" onClick={() => window.open("tel:+919876543210")}>
+              <Button size="lg" variant="secondary" onClick={() => window.open("tel:+919844661119")}>
                 <Phone className="mr-2 w-5 h-5" />
                 Call Us
               </Button>
               <Button size="lg" className="bg-white text-amber-600 hover:bg-gray-100" onClick={handleWhatsAppClick}>
-                <MessageCircle className="mr-2 w-5 h-5" />
+                <FaWhatsapp className="mr-2 w-5 h-5" />
                 WhatsApp Us
               </Button>
             </div>

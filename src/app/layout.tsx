@@ -12,23 +12,23 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Royal Estates - Premium Real Estate Developers",
+  title: "Sreeyan Developers - Premium Real Estate Developers",
   description: "Building dreams and creating lasting homes for first-time buyers. Your trusted partner in finding the perfect home in Bangalore.",
-  keywords: ["Royal Estates", "Real Estate", "Bangalore", "Homes", "Apartments", "Villas", "First Time Buyers", "Property"],
-  authors: [{ name: "Royal Estates Team" }],
+  keywords: ["Sreeyan Developers", "Real Estate", "Bangalore", "Homes", "Apartments", "Villas", "First Time Buyers", "Property"],
+  authors: [{ name: "Sreeyan Developers Team" }],
   icons: {
-    icon: "/logo.png",
+    icon: "/logo.jpeg",
   },
   openGraph: {
-    title: "Royal Estates - Premium Real Estate Developers",
+    title: "Sreeyan Developers - Premium Real Estate Developers",
     description: "Building dreams and creating lasting homes for first-time buyers. Your trusted partner in finding the perfect home.",
-    url: "https://royalestates.com",
-    siteName: "Royal Estates",
+    url: "https://sreeyandevelopers.com",
+    siteName: "Sreeyan Developers",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Royal Estates - Premium Real Estate Developers",
+    title: "Sreeyan Developers - Premium Real Estate Developers",
     description: "Building dreams and creating lasting homes for first-time buyers.",
   },
 };

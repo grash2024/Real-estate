@@ -5,7 +5,8 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Building2, Home, MapPin, CheckCircle, Star, Phone, MessageCircle } from "lucide-react"
+import { ArrowRight, Building2, Home, MapPin, CheckCircle, Star, Phone } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link"
 import Image from "next/image"
 
@@ -16,18 +17,23 @@ export default function HomePage() {
     {
       title: "Find Your Dream Home",
       subtitle: "Premium properties designed for first-time home buyers",
-      image: "/api/placeholder/1920/1080"
+      image: "/hero-banner1.jpg"
     },
     {
       title: "Luxury Living Redefined",
       subtitle: "Experience the perfect blend of comfort and sophistication",
-      image: "/api/placeholder/1920/1080"
+      image: "/hero-banner2.jpg"
     },
     {
       title: "Invest in Your Future",
       subtitle: "Smart real estate investments for lasting value",
-      image: "/api/placeholder/1920/1080"
-    }
+      image: "/hero-banner3.jpg"
+    },
+    {
+    title: "Homes That Match Your Lifestyle",
+    subtitle: "Thoughtfully designed spaces in prime locations",
+    image: "/hero-banner4.jpg"
+  }
   ]
 
   const featuredProjects = [
@@ -74,7 +80,7 @@ export default function HomePage() {
     {
       name: "Rahul Sharma",
       profession: "Software Engineer",
-      content: "Royal Estates made our first home buying experience seamless. The team was professional and guided us through every step.",
+      content: "Sreeyan Developers made our first home buying experience seamless. The team was professional and guided us through every step.",
       rating: 5
     },
     {
@@ -99,11 +105,11 @@ export default function HomePage() {
   }, [heroSlides.length])
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/919876543210", "_blank")
+    window.open("https://wa.me/919844661119", "_blank")
   }
 
   const handleCallClick = () => {
-    window.open("tel:+919876543210")
+    window.open("tel:+919844661119")
   }
 
   return (
@@ -122,9 +128,9 @@ export default function HomePage() {
               }}
               transition={{ duration: 1 }}
             >
-              {index === 0 && (
+              {(
                 <img 
-                  src="/hero-banner.jpg" 
+                  src={slide.image} 
                   alt="Luxury Apartments" 
                   className="w-full h-full object-cover"
                 />
@@ -163,8 +169,8 @@ export default function HomePage() {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white/20" onClick={handleWhatsAppClick}>
-              <MessageCircle className="mr-2 w-5 h-5" />
+            <Button size="lg" variant="outline" className="bg-green-600 backdrop-blur-sm text-white border-white active:scale-105" onClick={handleWhatsAppClick}>
+              <FaWhatsapp className="mr-2 w-5 h-5" />
               WhatsApp Us
             </Button>
           </motion.div>
@@ -192,7 +198,7 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Royal Estates</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Sreeyan Developers</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               We're committed to delivering exceptional homes that exceed your expectations
             </p>
@@ -320,7 +326,7 @@ export default function HomePage() {
                   <CardContent className="pt-0">
                     <div className="flex mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                        <Star key={i} className="w-5 h-5 text-amber-400 fill-current" />
                       ))}
                     </div>
                     <p className="text-muted-foreground mb-6 italic">
@@ -339,7 +345,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-600 to-orange-600">
+      <section className="py-20 bg-gradient-to-r from-amber-600 to-amber-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -358,8 +364,8 @@ export default function HomePage() {
                 <Phone className="mr-2 w-5 h-5" />
                 Call Us Now
               </Button>
-              <Button size="lg" className="bg-white text-amber-600 hover:bg-gray-100" onClick={handleWhatsAppClick}>
-                <MessageCircle className="mr-2 w-5 h-5" />
+              <Button size="lg" className="bg-green-600 text-white border-white border-2" onClick={handleWhatsAppClick}>
+                <FaWhatsapp className="mr-2 w-5 h-5" />
                 WhatsApp Us
               </Button>
             </div>

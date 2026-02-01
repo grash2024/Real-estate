@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
+import { FaWhatsapp } from "react-icons/fa";
 import { Textarea } from "@/components/ui/textarea"
 import { 
   Phone, 
@@ -57,11 +58,11 @@ export default function ContactPage() {
   }
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/919876543210", "_blank")
+    window.open("https://wa.me/919844661119", "_blank")
   }
 
   const handleCallClick = () => {
-    window.open("tel:+919876543210")
+    window.open("tel:+919844661119")
   }
 
   const contactInfo = [
@@ -75,28 +76,34 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email",
-      details: ["info@royalestates.com", "sales@royalestates.com"],
-      action: () => window.open("mailto:info@royalestates.com"),
+      details: ["sreeyandevelopers@gmail.com", "sreeyandevelopers@gmail.com"],
+      action: () => window.open("mailto:sreeyandevelopers@gmail.com"),
       actionText: "Send Email"
     },
     {
       icon: MapPin,
       title: "Office Address",
       details: [
-        "123, MG Road,",
-        "Bangalore - 560001,",
+        "No. 189, 1ST FLOOR, CHAITRA SREE COMPLEX, NEAR VISHAL MART, K. NARAYANAPURA ROAD, KOTHANURU,",
+        "BANGALORE - 560 077,",
         "Karnataka, India"
       ],
-      action: () => window.open("https://maps.google.com/?q=Royal+Estates+Bangalore"),
+      action: () => window.open("https://maps.app.goo.gl/7C4zViLwmu9FNFkVA"),
       actionText: "Get Directions"
     },
     {
       icon: Clock,
       title: "Office Hours",
-      details: [
-        "Monday - Saturday: 9:00 AM - 7:00 PM",
-        "Sunday: 10:00 AM - 5:00 PM"
-      ],
+     details: [
+  "Sunday: 10:00 AM - 7:00 PM",
+  "Monday: 10:00 AM - 7:00 PM",
+  "Tuesday: 10:00 AM - 7:00 PM",
+  "Wednesday: 10:00 AM - 7:00 PM",
+  "Thursday: 10:00 AM - 7:00 PM",
+  "Friday: 10:00 AM - 7:00 PM",
+  "Saturday: 10:00 AM - 7:00 PM"
+]
+,
       action: handleWhatsAppClick,
       actionText: "WhatsApp Us"
     }
@@ -107,28 +114,28 @@ export default function ContactPage() {
       name: "Rahul Sharma",
       position: "Sales Manager",
       phone: "+91 98765 43210",
-      email: "rahul@royalestates.com",
+      email: "rahul@sreeyandevelopers.com",
       image: "/api/placeholder/100/100"
     },
     {
       name: "Priya Nair",
       position: "Customer Relations",
       phone: "+91 98765 43211",
-      email: "priya@royalestates.com",
+      email: "priya@sreeyandevelopers.com",
       image: "/api/placeholder/100/100"
     },
     {
       name: "Amit Kumar",
       position: "Project Consultant",
       phone: "+91 98765 43212",
-      email: "amit@royalestates.com",
+      email: "amit@sreeyandevelopers.com",
       image: "/api/placeholder/100/100"
     },
     {
       name: "Sneha Reddy",
       position: "Partnership Head",
       phone: "+91 98765 43213",
-      email: "sneha@royalestates.com",
+      email: "sneha@sreeyandevelopers.com",
       image: "/api/placeholder/100/100"
     }
   ]
@@ -155,7 +162,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-amber-50 to-orange-50">
+      <section className="relative py-20 bg-gradient-to-br from-amber-50 to-amber-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-4xl mx-auto text-center"
@@ -175,7 +182,7 @@ export default function ContactPage() {
                 Call Us Now
               </Button>
               <Button size="lg" variant="outline" onClick={handleWhatsAppClick}>
-                <MessageCircle className="mr-2 w-5 h-5" />
+                <FaWhatsapp className="mr-2 w-5 h-5" />
                 WhatsApp Us
               </Button>
             </div>
@@ -319,14 +326,14 @@ export default function ContactPage() {
                   <CardTitle>Visit Our Office</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="w-full h-96 bg-gradient-to-br from-amber-100 to-orange-100 rounded-lg mb-4" />
+                  <div className="w-full h-96 bg-gradient-to-br from-amber-100 to-amber-100 rounded-lg mb-4" />
                   <div className="space-y-3">
                     <div className="flex items-start space-x-3">
                       <MapPin className="w-5 h-5 text-amber-600 mt-1 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold">Royal Estates</p>
+                        <p className="font-semibold">Sreeyan Developers</p>
                         <p className="text-muted-foreground text-sm">
-                          123, MG Road, Bangalore - 560001<br />
+                        No. 189, 1ST FLOOR, CHAITRA SREE COMPLEX, NEAR VISHAL MART, K. NARAYANAPURA ROAD, KOTHANURU, BANGALORE - 560 077<br />
                           Karnataka, India
                         </p>
                       </div>
@@ -342,7 +349,7 @@ export default function ContactPage() {
                       </div>
                     </div>
                   </div>
-                  <Button className="w-full mt-4" onClick={() => window.open("https://maps.google.com/?q=Royal+Estates+Bangalore")}>
+                  <Button className="w-full mt-4" onClick={() => window.open("https://maps.app.goo.gl/7C4zViLwmu9FNFkVA")}>
                     Get Directions
                   </Button>
                 </CardContent>
@@ -379,7 +386,7 @@ export default function ContactPage() {
               >
                 <Card className="text-center">
                   <CardContent className="pt-6">
-                    <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-orange-100 rounded-full mx-auto mb-4" />
+                    <div className="w-20 h-20 bg-gradient-to-br from-amber-100 to-amber-100 rounded-full mx-auto mb-4" />
                     <h3 className="font-semibold text-lg mb-1">{member.name}</h3>
                     <p className="text-amber-600 text-sm mb-3">{member.position}</p>
                     <div className="space-y-2 text-sm">
@@ -449,7 +456,7 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-600 to-orange-600">
+      <section className="py-20 bg-gradient-to-r from-amber-600 to-amber-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

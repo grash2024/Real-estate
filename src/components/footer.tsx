@@ -10,29 +10,27 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <img 
-                src="/logo.png" 
-                alt="Royal Estates Logo" 
+                src="/logo.jpeg" 
+                alt="Sreeyan Developers Logo" 
                 className="w-10 h-10 rounded-lg"
               />
-              <span className="font-bold text-xl">Royal Estates</span>
+              <span className="font-bold text-xl">Sreeyan Developers</span>
             </div>
             <p className="text-muted-foreground max-w-sm">
               Building dreams and creating lasting homes for first-time buyers. 
               Your trusted partner in finding the perfect home.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-amber-600 transition-colors">
+              <Link href="https://www.facebook.com/share/18KMAGxb5o/" className="text-muted-foreground hover:text-amber-600 transition-colors">
                 <Facebook className="w-5 h-5" />
               </Link>
               <Link href="#" className="text-muted-foreground hover:text-amber-600 transition-colors">
                 <Twitter className="w-5 h-5" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-amber-600 transition-colors">
+              <Link href="https://www.instagram.com/sreeyandevelopers25/" className="text-muted-foreground hover:text-amber-600 transition-colors">
                 <Instagram className="w-5 h-5" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-amber-600 transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </Link>
+            
             </div>
           </div>
 
@@ -105,13 +103,13 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-amber-600" />
-                <span className="text-muted-foreground">info@royalestates.com</span>
+                <span className="text-muted-foreground">sreeyandevelopers@gmail.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-amber-600 mt-1" />
                 <span className="text-muted-foreground">
-                  123, MG Road,<br />
-                  Bangalore - 560001,<br />
+                  No. 189, 1ST FLOOR, CHAITRA SREE COMPLEX, NEAR VISHAL MART, K. NARAYANAPURA ROAD, KOTHANURU,<br />
+                   BANGALORE - 560 077,<br />
                   Karnataka, India
                 </span>
               </div>
@@ -121,7 +119,7 @@ export function Footer() {
 
         <div className="border-t mt-8 pt-8 text-center">
           <p className="text-muted-foreground">
-            © 2024 Royal Estates. All rights reserved. | 
+            © {new Date().getFullYear()} Sreeyan Developers. All rights reserved. | 
             <Link href="/privacy" className="hover:text-amber-600 transition-colors ml-1">
               Privacy Policy
             </Link> | 

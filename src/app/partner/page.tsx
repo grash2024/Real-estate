@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/ui/badge";
+import { FaWhatsapp } from "react-icons/fa";
 import { 
   Handshake, 
   Users, 
@@ -55,7 +56,7 @@ export default function PartnerPage() {
   }
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/919876543210", "_blank")
+    window.open("https://wa.me/919844661119", "_blank")
   }
 
   const partnershipTypes = [
@@ -119,7 +120,7 @@ export default function PartnerPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-amber-50 to-orange-50">
+      <section className="relative py-20 bg-gradient-to-br from-amber-50 to-amber-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-4xl mx-auto text-center"
@@ -131,14 +132,14 @@ export default function PartnerPage() {
               Partner With Us
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Join hands with Royal Estates and be part of Bangalore's premium real estate development journey
+              Join hands with Sreeyan Developers and be part of Bangalore's premium real estate development journey
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-amber-600 hover:bg-amber-700" onClick={handleWhatsAppClick}>
                 <MessageCircle className="mr-2 w-5 h-5" />
                 Start Partnership
               </Button>
-              <Button size="lg" variant="outline" onClick={() => window.open("tel:+919876543210")}>
+              <Button size="lg" variant="outline" onClick={() => window.open("tel:+919844661119")}>
                 <Phone className="mr-2 w-5 h-5" />
                 Call Us
               </Button>
@@ -207,7 +208,7 @@ export default function PartnerPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Partner With Royal Estates?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Partner With Sreeyan Developers?</h2>
               <p className="text-lg text-muted-foreground mb-8">
                 With over 15 years of experience and 50+ successful projects, we offer the perfect platform for growth-oriented partnerships.
               </p>
@@ -234,7 +235,7 @@ export default function PartnerPage() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="w-full h-96 bg-gradient-to-br from-amber-100 to-orange-100 rounded-lg" />
+              <div className="w-full h-96 bg-gradient-to-br from-amber-100 to-amber-100 rounded-lg" />
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg">
                 <div className="flex items-center space-x-4">
                   <div className="text-center">
@@ -316,7 +317,7 @@ export default function PartnerPage() {
               <div className="space-y-6">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-amber-600" />
-                  <span>info@royalestates.com</span>
+                  <span>sreeyandevelopers@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-amber-600" />
@@ -324,7 +325,7 @@ export default function PartnerPage() {
                 </div>
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-amber-600 mt-1" />
-                  <span>123, MG Road, Bangalore - 560001</span>
+                  <span>No. 189, 1ST FLOOR, CHAITRA SREE COMPLEX, NEAR VISHAL MART, K. NARAYANAPURA ROAD, KOTHANURU, BANGALORE - 560 077</span>
                 </div>
               </div>
 
@@ -417,7 +418,7 @@ export default function PartnerPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-600 to-orange-600">
+      <section className="py-20 bg-gradient-to-r from-amber-600 to-amber-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -432,12 +433,12 @@ export default function PartnerPage() {
               Let's discuss how we can create value together through strategic partnerships
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" onClick={() => window.open("tel:+919876543210")}>
+              <Button size="lg" variant="secondary" onClick={() => window.open("tel:+919844661119")}>
                 <Phone className="mr-2 w-5 h-5" />
                 Call Partnership Team
               </Button>
               <Button size="lg" className="bg-white text-amber-600 hover:bg-gray-100" onClick={handleWhatsAppClick}>
-                <MessageCircle className="mr-2 w-5 h-5" />
+                <FaWhatsapp className="mr-2 w-5 h-5" />
                 WhatsApp Us
               </Button>
             </div>

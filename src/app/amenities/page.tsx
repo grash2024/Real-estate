@@ -29,11 +29,11 @@ import {
 
 export default function AmenitiesPage() {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/919876543210", "_blank")
+    window.open("https://wa.me/919844661119", "_blank")
   }
 
   const handleCallClick = () => {
-    window.open("tel:+919876543210")
+    window.open("tel:+919844661119")
   }
 
   const coreAmenities = [
@@ -147,7 +147,7 @@ export default function AmenitiesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-amber-50 to-orange-50">
+      <section className="relative py-20 bg-gradient-to-br from-amber-50 to-amber-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-4xl mx-auto text-center"
@@ -359,7 +359,7 @@ export default function AmenitiesPage() {
                 transition={{ duration: 0.6, delay: item * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="w-full h-64 bg-gradient-to-br from-amber-100 to-orange-100 rounded-lg overflow-hidden">
+                <div className="w-full h-64 bg-gradient-to-br from-amber-100 to-amber-100 rounded-lg overflow-hidden">
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <Button size="icon" variant="secondary" className="bg-white/90">
@@ -379,7 +379,7 @@ export default function AmenitiesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-600 to-orange-600">
+      <section className="py-20 bg-gradient-to-r from-amber-600 to-amber-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

@@ -36,11 +36,11 @@ export default function ProjectDetailPage() {
   const projectId = params.id as string
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/919876543210", "_blank")
+    window.open("https://wa.me/919844661119", "_blank")
   }
 
   const handleCallClick = () => {
-    window.open("tel:+919876543210")
+    window.open("tel:+919844661119")
   }
 
   // Sample project data - in real app, this would come from an API
@@ -148,7 +148,7 @@ export default function ProjectDetailPage() {
       </section>
 
       {/* Hero Section */}
-      <section className="py-12 bg-gradient-to-br from-amber-50 to-orange-50">
+      <section className="py-12 bg-gradient-to-br from-amber-50 to-amber-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -204,7 +204,7 @@ export default function ProjectDetailPage() {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="w-full h-96 bg-gradient-to-br from-amber-100 to-orange-100 rounded-lg" />
+              <div className="w-full h-96 bg-gradient-to-br from-amber-100 to-amber-100 rounded-lg" />
               <div className="absolute top-4 right-4 flex gap-2">
                 <Button size="icon" variant="secondary">
                   <Camera className="w-4 h-4" />
@@ -254,7 +254,7 @@ export default function ProjectDetailPage() {
                   <CardContent>
                     <div className="grid grid-cols-2 gap-4">
                       {project.gallery.slice(0, 4).map((image, index) => (
-                        <div key={index} className="w-full h-32 bg-gradient-to-br from-amber-100 to-orange-100 rounded-lg cursor-pointer hover:opacity-80 transition-opacity" />
+                        <div key={index} className="w-full h-32 bg-gradient-to-br from-amber-100 to-amber-100 rounded-lg cursor-pointer hover:opacity-80 transition-opacity" />
                       ))}
                     </div>
                     <Button variant="outline" className="w-full mt-4">
@@ -275,7 +275,7 @@ export default function ProjectDetailPage() {
                       <p className="text-2xl font-bold text-amber-600">{plan.price}</p>
                     </CardHeader>
                     <CardContent>
-                      <div className="w-full h-48 bg-gradient-to-br from-amber-100 to-orange-100 rounded-lg mb-4" />
+                      <div className="w-full h-48 bg-gradient-to-br from-amber-100 to-amber-100 rounded-lg mb-4" />
                       <div className="space-y-2 mb-4">
                         <div className="flex justify-between">
                           <span className="text-muted-foreground">Area:</span>
@@ -324,7 +324,7 @@ export default function ProjectDetailPage() {
                     <CardTitle>Location Advantage</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="w-full h-64 bg-gradient-to-br from-amber-100 to-orange-100 rounded-lg mb-4" />
+                    <div className="w-full h-64 bg-gradient-to-br from-amber-100 to-amber-100 rounded-lg mb-4" />
                     <p className="text-muted-foreground mb-4">{project.location.address}</p>
                     
                     <div className="space-y-3">
@@ -363,7 +363,7 @@ export default function ProjectDetailPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-600 to-orange-600">
+      <section className="py-20 bg-gradient-to-r from-amber-600 to-amber-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
