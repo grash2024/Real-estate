@@ -1,40 +1,52 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Building2, Home, MapPin, CheckCircle, Star, Phone } from "lucide-react"
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  ArrowRight,
+  Building2,
+  Home,
+  
+  MapPin,
+  CheckCircle,
+  Star,
+  Phone,
+  ShieldCheck,
+  Handshake,
+  BadgeCheck,
+} from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
-import Link from "next/link"
-import Image from "next/image"
+import Link from "next/link";
+import Image from "next/image";
 
 export default function HomePage() {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const heroSlides = [
     {
       title: "Find Your Dream Home",
       subtitle: "Premium properties designed for first-time home buyers",
-      image: "/hero-banner1.jpg"
+      image: "/hero-banner1.jpg",
     },
     {
       title: "Luxury Living Redefined",
       subtitle: "Experience the perfect blend of comfort and sophistication",
-      image: "/hero-banner2.jpg"
+      image: "/hero-banner2.jpg",
     },
     {
       title: "Invest in Your Future",
       subtitle: "Smart real estate investments for lasting value",
-      image: "/hero-banner3.jpg"
+      image: "/hero-banner3.jpg",
     },
     {
-    title: "Homes That Match Your Lifestyle",
-    subtitle: "Thoughtfully designed spaces in prime locations",
-    image: "/hero-banner4.jpg"
-  }
-  ]
+      title: "Homes That Match Your Lifestyle",
+      subtitle: "Thoughtfully designed spaces in prime locations",
+      image: "/hero-banner4.jpg",
+    },
+  ];
 
   const featuredProjects = [
     {
@@ -45,7 +57,7 @@ export default function HomePage() {
       type: "2 & 3 BHK Apartments",
       status: "Ongoing",
       image: "/project-1.jpg",
-      features: ["Club House", "Swimming Pool", "Gym", "Children's Play Area"]
+      features: ["Club House", "Swimming Pool", "Gym", "Children's Play Area"],
     },
     {
       id: 2,
@@ -55,7 +67,7 @@ export default function HomePage() {
       type: "3 & 4 BHK Villas",
       status: "New Launch",
       image: "/project-2.jpg",
-      features: ["Private Garden", "Terrace", "Smart Home", "24/7 Security"]
+      features: ["Private Garden", "Terrace", "Smart Home", "24/7 Security"],
     },
     {
       id: 3,
@@ -65,52 +77,79 @@ export default function HomePage() {
       type: "2 & 3 BHK Apartments",
       status: "Ready to Move",
       image: "/hero-banner.jpg",
-      features: ["Metro Connectivity", "Shopping Mall", "Schools", "Hospitals"]
-    }
-  ]
+      features: ["Metro Connectivity", "Shopping Mall", "Schools", "Hospitals"],
+    },
+  ];
 
   const amenities = [
-    { icon: Building2, title: "Modern Architecture", description: "Contemporary designs with premium finishes" },
-    { icon: Home, title: "Smart Homes", description: "Integrated home automation systems" },
-    { icon: MapPin, title: "Prime Locations", description: "Strategic locations with excellent connectivity" },
-    { icon: CheckCircle, title: "RERA Approved", description: "All projects are RERA registered and approved" }
-  ]
+    {
+      icon: ShieldCheck,
+      title: "Quality and Safety focus",
+      description:
+        "Built with high-quality materials and strict safety standards",
+    },
+    {
+      icon: MapPin,
+      title: "Prime Locations",
+      description:
+        "Well-connected neighborhoods close to schools, hospitals, and transport",
+    },
+    {
+      icon: Home,
+      title: "Modern Amenities",
+      description: "Smart living features with contemporary design and improved comfort",
+    },
+    {
+      icon: Handshake,
+      title: "Trust and Reliability",
+      description:
+        "Transparent processes with a proven track record of timely delivery",
+    },
+    {
+      icon: BadgeCheck,
+      title: "RERA Approved",
+      description: "All projects are legally approved and RERA compliant",
+    },
+  ];
 
   const testimonials = [
     {
-      name: "Rahul Sharma",
+      name: "Jeevitha",
       profession: "Software Engineer",
-      content: "Sreeyan Developers made our first home buying experience seamless. The team was professional and guided us through every step.",
-      rating: 5
+      content:
+        "Sreeyan Developers made our first home buying experience seamless. The team was professional and guided us through every step.",
+      rating: 5,
     },
     {
-      name: "Priya Nair",
+      name: "Rajath Shetty",
       profession: "Business Owner",
-      content: "Excellent quality construction and timely delivery. The amenities are world-class. Highly recommend!",
-      rating: 5
+      content:
+        "Excellent quality construction and timely delivery. The amenities are world-class. Highly recommend!",
+      rating: 5,
     },
     {
-      name: "Amit Kumar",
+      name: "Sanjay",
       profession: "Salaried Professional",
-      content: "Transparent pricing and no hidden costs. The whole process was smooth from booking to possession.",
-      rating: 5
-    }
-  ]
+      content:
+        "Transparent pricing and no hidden costs. The whole process was smooth from booking to possession.",
+      rating: 5,
+    },
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length)
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [heroSlides.length])
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [heroSlides.length]);
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/919844661119", "_blank")
-  }
+    window.open("https://wa.me/919844661119", "_blank");
+  };
 
   const handleCallClick = () => {
-    window.open("tel:+919844661119")
-  }
+    window.open("tel:+919844661119");
+  };
 
   return (
     <div className="min-h-screen">
@@ -122,19 +161,19 @@ export default function HomePage() {
               key={index}
               className="absolute inset-0"
               initial={{ opacity: 0, scale: 1.1 }}
-              animate={{ 
+              animate={{
                 opacity: currentSlide === index ? 1 : 0,
-                scale: currentSlide === index ? 1 : 1.1
+                scale: currentSlide === index ? 1 : 1.1,
               }}
               transition={{ duration: 1 }}
             >
-              {(
-                <img 
-                  src={slide.image} 
-                  alt="Luxury Apartments" 
+              {
+                <img
+                  src={slide.image}
+                  alt="Luxury Apartments"
                   className="w-full h-full object-cover"
                 />
-              )}
+              }
               <div className="absolute inset-0 bg-black/40" />
             </motion.div>
           ))}
@@ -163,13 +202,21 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3">
+            <Button
+              size="lg"
+              className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3"
+            >
               <Link href="/projects" className="flex items-center">
                 Explore Projects
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="bg-green-600 backdrop-blur-sm text-white border-white active:scale-105" onClick={handleWhatsAppClick}>
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-green-600 backdrop-blur-sm text-white border-white active:scale-105"
+              onClick={handleWhatsAppClick}
+            >
               <FaWhatsapp className="mr-2 w-5 h-5" />
               WhatsApp Us
             </Button>
@@ -181,7 +228,7 @@ export default function HomePage() {
           {heroSlides.map((_, index) => (
             <button
               key={index}
-              className={`w-3 h-3 rounded-full transition-all ${currentSlide === index ? 'bg-white w-8' : 'bg-white/50'}`}
+              className={`w-3 h-3 rounded-full transition-all ${currentSlide === index ? "bg-white w-8" : "bg-white/50"}`}
               onClick={() => setCurrentSlide(index)}
             />
           ))}
@@ -198,9 +245,12 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Sreeyan Developers</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Why Choose Sreeyan Developers
+            </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              We're committed to delivering exceptional homes that exceed your expectations
+              We're committed to delivering exceptional homes that exceed your
+              expectations
             </p>
           </motion.div>
 
@@ -216,8 +266,12 @@ export default function HomePage() {
                 <Card className="text-center p-6 hover:shadow-lg transition-shadow">
                   <CardContent className="pt-6">
                     <feature.icon className="w-12 h-12 text-amber-600 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                    <p className="text-muted-foreground">{feature.description}</p>
+                    <h3 className="text-xl font-semibold mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {feature.description}
+                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -236,7 +290,9 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Featured Projects
+            </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Discover our premium residential projects in prime locations
             </p>
@@ -253,8 +309,8 @@ export default function HomePage() {
               >
                 <Card className="overflow-hidden hover:shadow-xl transition-shadow">
                   <div className="relative">
-                    <img 
-                      src={project.image} 
+                    <img
+                      src={project.image}
                       alt={project.name}
                       className="w-full h-48 object-cover"
                     />
@@ -263,16 +319,24 @@ export default function HomePage() {
                     </Badge>
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
+                    <h3 className="text-xl font-semibold mb-2">
+                      {project.name}
+                    </h3>
                     <div className="flex items-center text-muted-foreground mb-2">
                       <MapPin className="w-4 h-4 mr-1" />
                       <span className="text-sm">{project.location}</span>
                     </div>
-                    <p className="text-amber-600 font-semibold mb-3">{project.price}</p>
+                    <p className="text-amber-600 font-semibold mb-3">
+                      {project.price}
+                    </p>
                     <p className="text-muted-foreground mb-4">{project.type}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.features.slice(0, 2).map((feature, idx) => (
-                        <Badge key={idx} variant="secondary" className="text-xs">
+                        <Badge
+                          key={idx}
+                          variant="secondary"
+                          className="text-xs"
+                        >
                           {feature}
                         </Badge>
                       ))}
@@ -287,7 +351,11 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" variant="outline" className="bg-amber-600 hover:bg-amber-700 text-white">
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-amber-600 hover:bg-amber-700 text-white"
+            >
               <Link href="/projects" className="flex items-center">
                 View All Projects
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -307,9 +375,12 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Homeowners Say</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              What Our Homeowners Say
+            </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Real experiences from real homeowners who trusted us with their dreams
+              Real experiences from real homeowners who trusted us with their
+              dreams
             </p>
           </motion.div>
 
@@ -326,7 +397,10 @@ export default function HomePage() {
                   <CardContent className="pt-0">
                     <div className="flex mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-amber-400 fill-current" />
+                        <Star
+                          key={i}
+                          className="w-5 h-5 text-amber-400 fill-current"
+                        />
                       ))}
                     </div>
                     <p className="text-muted-foreground mb-6 italic">
@@ -334,7 +408,9 @@ export default function HomePage() {
                     </p>
                     <div>
                       <p className="font-semibold">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.profession}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {testimonial.profession}
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -357,14 +433,19 @@ export default function HomePage() {
               Ready to Find Your Dream Home?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Let our experts help you discover the perfect property that matches your lifestyle and budget
+              Let our experts help you discover the perfect property that
+              matches your lifestyle and budget
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" onClick={handleCallClick}>
                 <Phone className="mr-2 w-5 h-5" />
                 Call Us Now
               </Button>
-              <Button size="lg" className="bg-green-600 text-white border-white border-2" onClick={handleWhatsAppClick}>
+              <Button
+                size="lg"
+                className="bg-green-600 text-white border-white border-2"
+                onClick={handleWhatsAppClick}
+              >
                 <FaWhatsapp className="mr-2 w-5 h-5" />
                 WhatsApp Us
               </Button>
@@ -373,5 +454,5 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

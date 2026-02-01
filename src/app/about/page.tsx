@@ -1,94 +1,122 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { FaWhatsapp } from "react-icons/fa";
-import { 
-  Building2, 
-  Users, 
-  Award, 
-  Target, 
-  CheckCircle, 
+import {
+  Building2,
+  Users,
+  Award,
+  Target,
+  CheckCircle,
   Calendar,
   TrendingUp,
   Heart,
   ArrowRight,
   Phone,
-  MessageCircle
-} from "lucide-react"
-import Link from "next/link"
+  MessageCircle,
+} from "lucide-react";
+import Link from "next/link";
 
 export default function AboutPage() {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/919844661119", "_blank")
-  }
+    window.open("https://wa.me/919844661119", "_blank");
+  };
 
   const stats = [
     { icon: Building2, label: "Projects Delivered", value: "50+" },
     { icon: Users, label: "Happy Homeowners", value: "5000+" },
-    { icon: Award, label: "Years of Experience", value: "15+" },
-    { icon: Target, label: "Success Rate", value: "100%" }
-  ]
+    { icon: Award, label: "Years of Experience", value: "12+" },
+    { icon: Target, label: "Success Rate", value: "100%" },
+  ];
 
   const values = [
     {
       icon: Heart,
       title: "Customer First",
-      description: "We prioritize our customers' needs and dreams above everything else, ensuring complete satisfaction."
+      description:
+        "We prioritize our customers' needs and dreams above everything else, ensuring complete satisfaction.",
     },
     {
       icon: CheckCircle,
       title: "Quality Assurance",
-      description: "Uncompromising quality in construction, materials, and finishes that exceed industry standards."
+      description:
+        "Uncompromising quality in construction, materials, and finishes that exceed industry standards.",
     },
     {
       icon: TrendingUp,
       title: "Innovation",
-      description: "Embracing modern technology and innovative designs to create future-ready homes."
+      description:
+        "Embracing modern technology and innovative designs to create future-ready homes.",
     },
     {
       icon: Calendar,
       title: "Timely Delivery",
-      description: "Commitment to delivering projects on time, every time, without compromising on quality."
-    }
-  ]
+      description:
+        "Commitment to delivering projects on time, every time, without compromising on quality.",
+    },
+  ];
 
   const leadership = [
     {
       name: "Rajesh Kumar",
       position: "Founder & CEO",
       image: "/api/placeholder/300/300",
-      description: "With over 20 years in real estate, Rajesh leads our vision of creating dream homes."
+      description:
+        "With over 20 years in real estate, Rajesh leads our vision of creating dream homes.",
     },
     {
       name: "Priya Sharma",
       position: "Managing Director",
       image: "/api/placeholder/300/300",
-      description: "Priya brings expertise in project management and customer relations to our leadership team."
+      description:
+        "Priya brings expertise in project management and customer relations to our leadership team.",
     },
     {
       name: "Amit Patel",
       position: "Chief Architect",
       image: "/api/placeholder/300/300",
-      description: "Amit's innovative designs have won multiple awards for architectural excellence."
+      description:
+        "Amit's innovative designs have won multiple awards for architectural excellence.",
     },
     {
       name: "Sneha Reddy",
       position: "Head of Sales",
       image: "/api/placeholder/300/300",
-      description: "Sneha ensures a seamless home buying experience for all our customers."
-    }
-  ]
+      description:
+        "Sneha ensures a seamless home buying experience for all our customers.",
+    },
+  ];
 
   const milestones = [
-    { year: "2009", title: "Company Founded", description: "Started with a vision to redefine urban living" },
-    { year: "2012", title: "First Project Delivered", description: "Successfully completed our first residential project" },
-    { year: "2016", title: "Expansion", description: "Expanded to multiple locations across Bangalore" },
-    { year: "2020", title: "500+ Homes Delivered", description: "Milestone of delivering over 500 happy homes" },
-    { year: "2024", title: "15 Years of Excellence", description: "Celebrating 15 years of trust and quality" }
-  ]
+    {
+      year: "2009",
+      title: "Company Founded",
+      description: "Started with a vision to redefine urban living",
+    },
+    {
+      year: "2012",
+      title: "First Project Delivered",
+      description: "Successfully completed our first residential project",
+    },
+    {
+      year: "2016",
+      title: "Expansion",
+      description: "Expanded to multiple locations across Bangalore",
+    },
+    {
+      year: "2020",
+      title: "500+ Homes Delivered",
+      description: "Milestone of delivering over 500 happy homes",
+    },
+    {
+      year: "2024",
+      title: "12 Years of Excellence",
+      description: "Celebrating 12 Years of trust and quality",
+    },
+  ];
 
   return (
     <div className="min-h-screen">
@@ -104,10 +132,22 @@ export default function AboutPage() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
               About Sreeyan Developers
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
-              Building dreams and creating lasting homes for over 15 years. 
-              We are your trusted partner in finding the perfect home.
-            </p>
+           <p className="text-xl leading-relaxed text-muted-foreground mb-8">
+  <span className="font-semibold text-foreground">
+    Sreeyan Developers
+  </span>
+  , based in{" "}
+  <span className="font-medium text-foreground">
+    Bangalore
+  </span>
+  , brings over{" "}
+  <span className="font-semibold text-primary">
+    12 years of experience
+  </span>{" "}
+  in construction, delivering projects built on trust, precision, and quality.
+  
+</p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-amber-600 hover:bg-amber-700">
                 <Link href="/projects" className="flex items-center">
@@ -138,7 +178,9 @@ export default function AboutPage() {
                 viewport={{ once: true }}
               >
                 <stat.icon className="w-12 h-12 text-amber-600 mx-auto mb-4" />
-                <div className="text-3xl font-bold text-foreground mb-2">{stat.value}</div>
+                <div className="text-3xl font-bold text-foreground mb-2">
+                  {stat.value}
+                </div>
                 <div className="text-muted-foreground">{stat.label}</div>
               </motion.div>
             ))}
@@ -159,20 +201,22 @@ export default function AboutPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Founded in 2009, Sreeyan Developers began with a simple yet powerful vision: 
-                  to create homes that people would love to live in. We started as a small 
-                  team with big dreams, focused on understanding the needs of first-time 
-                  home buyers.
+                  Founded in 2009, Sreeyan Developers began with a simple yet
+                  powerful vision: to create homes that people would love to
+                  live in. We started as a small team with big dreams, focused
+                  on understanding the needs of first-time home buyers.
                 </p>
                 <p>
-                  Over the years, we've grown into one of Bangalore's most trusted real 
-                  estate developers, delivering over 50 projects and helping more than 
-                  5000 families find their dream homes. Our journey has been marked by 
-                  innovation, quality, and an unwavering commitment to customer satisfaction.
+                  Over the years, we've grown into one of Bangalore's most
+                  trusted real estate developers, delivering over 50 projects
+                  and helping more than 5000 families find their dream homes.
+                  Our journey has been marked by innovation, quality, and an
+                  unwavering commitment to customer satisfaction.
                 </p>
                 <p>
-                  Today, we continue to push boundaries and set new standards in residential 
-                  development, always keeping our customers' dreams at the heart of everything we do.
+                  Today, we continue to push boundaries and set new standards in
+                  residential development, always keeping our customers' dreams
+                  at the heart of everything we do.
                 </p>
               </div>
             </motion.div>
@@ -199,7 +243,9 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Core Values</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Our Core Values
+            </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
@@ -217,7 +263,9 @@ export default function AboutPage() {
                 <Card className="text-center p-6 h-full hover:shadow-lg transition-shadow">
                   <CardContent className="pt-6">
                     <value.icon className="w-12 h-12 text-amber-600 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
+                    <h3 className="text-xl font-semibold mb-3">
+                      {value.title}
+                    </h3>
                     <p className="text-muted-foreground">{value.description}</p>
                   </CardContent>
                 </Card>
@@ -237,7 +285,9 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Leadership Team</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Leadership Team
+            </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Meet the visionaries behind Sreeyan Developers
             </p>
@@ -255,9 +305,15 @@ export default function AboutPage() {
                 <Card className="text-center overflow-hidden">
                   <div className="w-full h-48 bg-gradient-to-br from-amber-100 to-amber-100" />
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-1">{leader.name}</h3>
-                    <Badge variant="secondary" className="mb-3">{leader.position}</Badge>
-                    <p className="text-muted-foreground text-sm">{leader.description}</p>
+                    <h3 className="text-xl font-semibold mb-1">
+                      {leader.name}
+                    </h3>
+                    <Badge variant="secondary" className="mb-3">
+                      {leader.position}
+                    </Badge>
+                    <p className="text-muted-foreground text-sm">
+                      {leader.description}
+                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -293,14 +349,21 @@ export default function AboutPage() {
                 viewport={{ once: true }}
               >
                 <div className="flex-shrink-0 w-24 text-right pr-8">
-                  <Badge variant="outline" className="text-amber-600 border-amber-600">
+                  <Badge
+                    variant="outline"
+                    className="text-amber-600 border-amber-600"
+                  >
                     {milestone.year}
                   </Badge>
                 </div>
                 <div className="flex-shrink-0 w-4 h-4 bg-amber-600 rounded-full"></div>
                 <div className="flex-grow pl-8">
-                  <h3 className="text-xl font-semibold mb-1">{milestone.title}</h3>
-                  <p className="text-muted-foreground">{milestone.description}</p>
+                  <h3 className="text-xl font-semibold mb-1">
+                    {milestone.title}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {milestone.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -321,14 +384,23 @@ export default function AboutPage() {
               Join the Sreeyan Developers Family
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Experience the difference of working with a developer who truly cares about your dreams
+              Experience the difference of working with a developer who truly
+              cares about your dreams
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" onClick={() => window.open("tel:+919844661119")}>
+              <Button
+                size="lg"
+                variant="secondary"
+                onClick={() => window.open("tel:+919844661119")}
+              >
                 <Phone className="mr-2 w-5 h-5" />
                 Call Us
               </Button>
-              <Button size="lg" className="bg-white text-amber-600 hover:bg-gray-100" onClick={handleWhatsAppClick}>
+              <Button
+                size="lg"
+                className="bg-white text-amber-600 hover:bg-gray-100"
+                onClick={handleWhatsAppClick}
+              >
                 <FaWhatsapp className="mr-2 w-5 h-5" />
                 WhatsApp Us
               </Button>
@@ -337,5 +409,5 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

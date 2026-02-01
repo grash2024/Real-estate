@@ -95,13 +95,7 @@ export default function ContactPage() {
       icon: Clock,
       title: "Office Hours",
      details: [
-  "Sunday: 10:00 AM - 7:00 PM",
-  "Monday: 10:00 AM - 7:00 PM",
-  "Tuesday: 10:00 AM - 7:00 PM",
-  "Wednesday: 10:00 AM - 7:00 PM",
-  "Thursday: 10:00 AM - 7:00 PM",
-  "Friday: 10:00 AM - 7:00 PM",
-  "Saturday: 10:00 AM - 7:00 PM"
+  "Sun-Sat: 9:00 AM - 7:00 PM"
 ]
 ,
       action: handleWhatsAppClick,
@@ -142,20 +136,36 @@ export default function ContactPage() {
 
   const faqs = [
     {
-      question: "Do you provide site visits?",
-      answer: "Yes, we provide complimentary site visits for all our projects. Please schedule an appointment in advance."
+      question: "How far is nearest metro station from Sreeyan Square? ",
+      answer: "The nearest metro station to Sreeyan Square is Nagawara metro station, which is 3.38 Km away from the location."
     },
     {
-      question: "What are your office timings?",
-      answer: "Our office is open Monday to Saturday from 9:00 AM to 7:00 PM, and on Sundays from 10:00 AM to 5:00 PM."
+      question: "Are there any safety related concerns in Hennur Road?",
+      answer: "Former and existing residents have rated this locality 4/5 on safety. This means, this is one of the good localities where safety is not a concern."
     },
     {
-      question: "How can I get project brochures?",
-      answer: "You can download brochures from our project pages or contact us directly, and we'll email them to you."
+      question: "Are there any sports facilities in this project? ",
+      answer: "Yes, there are Swimming Pool facilities in Sreeyan Square."
     },
     {
-      question: "Do you offer home loan assistance?",
-      answer: "Yes, we have tie-ups with leading banks and can assist you with the complete home loan process."
+      question: "What are the security features of Sreeyan Square?",
+      answer: "Sreeyan Square offers 24x7 Security and Intercom to ensure all the residents feel safe and secure."
+    },
+    {
+      question: "Are there any good hospitals close to Sreeyan Square?",
+      answer: "Yes, there are good hospitals close to Sreeyan Square such as Medi Derma Hospital, Shree Vijayalakshmi Hospital and Trauma Centre and Sri Vijayalakshmi Pragathi Hospital."
+    },
+     {
+      question: "How many housing societies are there in Hennur Road, Bangalore?",
+      answer: "There are 58 housing societies in this locality. Nearly 5 projects are ongoing in this area. If you are looking for new projects, you can explore 3 brand new housing societies in Hennur Road, Bangalore"
+    },
+     {
+      question: "Does Sreeyan Square has any open area?",
+      answer: "Sreeyan Square has 30.00% open area."
+    },
+     {
+      question: "In which area is Sreeyan Square located?",
+      answer: "The project is situated in Hennur Road, Bangalore North. Click to view project details."
     }
   ]
 
