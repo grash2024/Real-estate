@@ -59,105 +59,60 @@ export default function AboutPage() {
     },
   ];
 
-  const leadership = [
-    {
-      name: "Rajesh Kumar",
-      position: "Founder & CEO",
-      image: "/api/placeholder/300/300",
-      description:
-        "With over 20 years in real estate, Rajesh leads our vision of creating dream homes.",
-    },
-    {
-      name: "Priya Sharma",
-      position: "Managing Director",
-      image: "/api/placeholder/300/300",
-      description:
-        "Priya brings expertise in project management and customer relations to our leadership team.",
-    },
-    {
-      name: "Amit Patel",
-      position: "Chief Architect",
-      image: "/api/placeholder/300/300",
-      description:
-        "Amit's innovative designs have won multiple awards for architectural excellence.",
-    },
-    {
-      name: "Sneha Reddy",
-      position: "Head of Sales",
-      image: "/api/placeholder/300/300",
-      description:
-        "Sneha ensures a seamless home buying experience for all our customers.",
-    },
-  ];
-
-  const milestones = [
-    {
-      year: "2009",
-      title: "Company Founded",
-      description: "Started with a vision to redefine urban living",
-    },
-    {
-      year: "2012",
-      title: "First Project Delivered",
-      description: "Successfully completed our first residential project",
-    },
-    {
-      year: "2016",
-      title: "Expansion",
-      description: "Expanded to multiple locations across Bangalore",
-    },
-    {
-      year: "2020",
-      title: "500+ Homes Delivered",
-      description: "Milestone of delivering over 500 happy homes",
-    },
-    {
-      year: "2024",
-      title: "12 Years of Excellence",
-      description: "Celebrating 12 Years of trust and quality",
-    },
-  ];
-
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-amber-50 to-amber-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 bg-gradient-to-br from-amber-50 via-background to-background dark:from-amber-950/20 dark:via-background dark:to-background border-b border-border">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
+            <Badge
+              variant="outline"
+              className="mb-6 px-4 py-1 text-amber-600 border-amber-600 dark:text-amber-500 dark:border-amber-500 bg-amber-50/50 dark:bg-amber-950/30"
+            >
+              Established Since 2014
+            </Badge>
+
+            <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight text-foreground">
               About Sreeyan Developers
             </h1>
-           <p className="text-xl leading-relaxed text-muted-foreground mb-8">
-  <span className="font-semibold text-foreground">
-    Sreeyan Developers
-  </span>
-  , based in{" "}
-  <span className="font-medium text-foreground">
-    Bangalore
-  </span>
-  , brings over{" "}
-  <span className="font-semibold text-primary">
-    12 years of experience
-  </span>{" "}
-  in construction, delivering projects built on trust, precision, and quality.
-  
-</p>
+
+            <p className="text-xl md:text-2xl leading-relaxed text-muted-foreground mb-10 max-w-3xl mx-auto">
+              Based in{" "}
+              <span className="text-foreground font-bold underline decoration-amber-500/50">
+                Bangalore
+              </span>
+              , we bring over{" "}
+              <span className="text-amber-600 dark:text-amber-500 font-bold">
+                12 years of experience{" "}
+              </span>
+              to construction, delivering projects built on trust, precision,
+              and quality.
+            </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-amber-600 hover:bg-amber-700">
-                <Link href="/projects" className="flex items-center">
-                  Our Projects
+              <Button
+                size="lg"
+                className="bg-amber-600 hover:bg-amber-700 text-white h-14 px-8 rounded-xl text-lg font-semibold shadow-lg shadow-amber-600/20"
+                asChild
+              >
+                <Link href="/projects">
+                  Explore Projects
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" onClick={handleWhatsAppClick}>
-                <MessageCircle className="mr-2 w-5 h-5" />
-                Contact Us
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={handleWhatsAppClick}
+                className="h-14 px-8 rounded-xl text-lg font-semibold border-border bg-background hover:bg-muted"
+              >
+                <FaWhatsapp className="mr-2 w-5 h-5 text-green-600" />
+                WhatsApp Us
               </Button>
             </div>
           </motion.div>
@@ -165,154 +120,64 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 border-b border-border">
+        <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
+                className="p-8 rounded-3xl bg-muted/30 dark:bg-muted/10 border border-transparent hover:border-amber-500/30 transition-all group text-center"
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <stat.icon className="w-12 h-12 text-amber-600 mx-auto mb-4" />
-                <div className="text-3xl font-bold text-foreground mb-2">
+                <div className="mb-4 inline-flex p-3 rounded-2xl bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500 group-hover:scale-110 transition-transform">
+                  <stat.icon className="w-8 h-8" />
+                </div>
+                <div className="text-4xl font-black text-foreground mb-2 tracking-tighter">
                   {stat.value}
                 </div>
-                <div className="text-muted-foreground">{stat.label}</div>
+                <div className="text-muted-foreground font-medium uppercase text-xs tracking-[0.2em]">
+                  {stat.label}
+                </div>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Story Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
-              <div className="space-y-4 text-muted-foreground">
-                <p>
-                  Founded in 2009, Sreeyan Developers began with a simple yet
-                  powerful vision: to create homes that people would love to
-                  live in. We started as a small team with big dreams, focused
-                  on understanding the needs of first-time home buyers.
-                </p>
-                <p>
-                  Over the years, we've grown into one of Bangalore's most
-                  trusted real estate developers, delivering over 50 projects
-                  and helping more than 5000 families find their dream homes.
-                  Our journey has been marked by innovation, quality, and an
-                  unwavering commitment to customer satisfaction.
-                </p>
-                <p>
-                  Today, we continue to push boundaries and set new standards in
-                  residential development, always keeping our customers' dreams
-                  at the heart of everything we do.
-                </p>
-              </div>
-            </motion.div>
-            <motion.div
-              className="relative"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-full h-96 bg-gradient-to-br from-amber-100 to-amber-100 rounded-lg" />
-            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-24 bg-muted/20 dark:bg-muted/5">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
               Our Core Values
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              The principles that guide everything we do
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              The foundation of every home we build.
             </p>
-          </motion.div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="text-center p-6 h-full hover:shadow-lg transition-shadow">
-                  <CardContent className="pt-6">
-                    <value.icon className="w-12 h-12 text-amber-600 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold mb-3">
+                <Card className="border-border bg-card shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
+                  <CardContent className="p-8">
+                    <div className="w-14 h-14 rounded-2xl bg-amber-600 dark:bg-amber-500 flex items-center justify-center text-white mb-6 shadow-lg shadow-amber-600/20">
+                      <value.icon className="w-7 h-7" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-foreground tracking-tight">
                       {value.title}
                     </h3>
-                    <p className="text-muted-foreground">{value.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership Team */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Leadership Team
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Meet the visionaries behind Sreeyan Developers
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {leadership.map((leader, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="text-center overflow-hidden">
-                  <div className="w-full h-48 bg-gradient-to-br from-amber-100 to-amber-100" />
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-1">
-                      {leader.name}
-                    </h3>
-                    <Badge variant="secondary" className="mb-3">
-                      {leader.position}
-                    </Badge>
-                    <p className="text-muted-foreground text-sm">
-                      {leader.description}
+                    <p className="text-muted-foreground leading-relaxed italic">
+                      "{value.description}"
                     </p>
                   </CardContent>
                 </Card>
@@ -322,90 +187,51 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Journey</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Key milestones that shaped our success
-            </p>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            {milestones.map((milestone, index) => (
-              <motion.div
-                key={index}
-                className="flex items-center mb-8 last:mb-0"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="flex-shrink-0 w-24 text-right pr-8">
-                  <Badge
-                    variant="outline"
-                    className="text-amber-600 border-amber-600"
-                  >
-                    {milestone.year}
-                  </Badge>
-                </div>
-                <div className="flex-shrink-0 w-4 h-4 bg-amber-600 rounded-full"></div>
-                <div className="flex-grow pl-8">
-                  <h3 className="text-xl font-semibold mb-1">
-                    {milestone.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {milestone.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-600 to-amber-600">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Join the Sreeyan Developers Family
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Experience the difference of working with a developer who truly
-              cares about your dreams
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                variant="secondary"
-                onClick={() => window.open("tel:+919844661119")}
-              >
-                <Phone className="mr-2 w-5 h-5" />
-                Call Us
-              </Button>
-              <Button
-                size="lg"
-                className="bg-white text-amber-600 hover:bg-gray-100"
-                onClick={handleWhatsAppClick}
-              >
-                <FaWhatsapp className="mr-2 w-5 h-5" />
-                WhatsApp Us
-              </Button>
-            </div>
-          </motion.div>
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="relative rounded-[3rem] overflow-hidden bg-amber-600 dark:bg-amber-700 p-12 text-center text-white shadow-2xl">
+            {/* Decorative circles */}
+            <div className="absolute -top-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
+            <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-black/10 rounded-full blur-3xl" />
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="relative z-10"
+            >
+              <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                Start Your Journey Today
+              </h2>
+              <p className="text-xl text-amber-50/90 mb-10 max-w-2xl mx-auto">
+                Join over 5000+ happy families who found their dream home with
+                Sreeyan Developers.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-white text-amber-700 hover:bg-amber-50 font-bold h-14 px-10 rounded-2xl shadow-lg transition-transform active:scale-95 border-none"
+                >
+                  <a href="tel:+919844661119" className="flex items-center">
+                    <Phone className="mr-2 w-5 h-5" />
+                    Call Sales Team
+                  </a>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  onClick={handleWhatsAppClick}
+                  className="border-white/40 text-white hover:bg-white/10 h-14 px-10 rounded-2xl font-bold backdrop-blur-sm"
+                >
+                  <MessageCircle className="mr-2 w-5 h-5" />
+                  Chat on WhatsApp
+                </Button>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
     </div>

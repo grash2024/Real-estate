@@ -48,36 +48,26 @@ export default function HomePage() {
     },
   ];
 
-  const featuredProjects = [
+const featuredProjects = [
     {
-      id: 1,
-      name: "Royal Gardens",
-      location: "Whitefield, Bangalore",
-      price: "₹85 Lakhs - ₹1.5 Cr",
+      id: "sreeyan-square",
+      name: "Sreeyan Square",
+      location: "Hennur Road, Bangalore",
+      price: "₹65 Lakhs - ₹95 Lakhs*",
       type: "2 & 3 BHK Apartments",
       status: "Ongoing",
-      image: "/project-1.jpg",
-      features: ["Club House", "Swimming Pool", "Gym", "Children's Play Area"],
+      image: "/hero-banner1.jpg", 
+      features: ["Swimming Pool", "Gymnasium", "30% Open Space", "Metro Connectivity"],
     },
     {
-      id: 2,
-      name: "Sunshine Villas",
-      location: "Electronic City, Bangalore",
-      price: "₹1.2 Cr - ₹2.5 Cr",
-      type: "3 & 4 BHK Villas",
-      status: "New Launch",
-      image: "/project-2.jpg",
-      features: ["Private Garden", "Terrace", "Smart Home", "24/7 Security"],
-    },
-    {
-      id: 3,
-      name: "Metropolitan Homes",
-      location: "HSR Layout, Bangalore",
-      price: "₹75 Lakhs - ₹1.2 Cr",
-      type: "2 & 3 BHK Apartments",
+      id: "sreeyan-serenity",
+      name: "Sreeyan Serenity",
+      location: "Kyalasanahalli, Bangalore",
+      price: "₹45 Lakhs - ₹65 Lakhs*",
+      type: "2 BHK Apartments",
       status: "Ready to Move",
-      image: "/hero-banner.jpg",
-      features: ["Metro Connectivity", "Shopping Mall", "Schools", "Hospitals"],
+      image: "/hero-banner3.jpg", 
+      features: ["Power Backup", "Secure Community", "Vaastu Compliant", "Covered Parking"],
     },
   ];
 

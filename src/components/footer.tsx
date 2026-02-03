@@ -1,132 +1,170 @@
+"use client"
+
 import Link from "next/link"
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Facebook, 
+  Instagram, 
+  ExternalLink 
+} from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa"
 
 export function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
-    <footer className="bg-muted/50 border-t">
+    <footer className="bg-muted/30 dark:bg-muted/10 border-t border-border transition-colors duration-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          
           {/* Company Info */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
+          <div className="space-y-6">
+            <Link href="/" className="flex items-center space-x-3 group">
               <img 
                 src="/logo.jpeg" 
                 alt="Sreeyan Developers Logo" 
-                className="w-10 h-10 rounded-lg"
+                className="w-10 h-10 rounded-lg object-cover ring-1 ring-border group-hover:ring-amber-600 transition-all"
               />
-              <span className="font-bold text-xl">Sreeyan Developers</span>
-            </div>
-            <p className="text-muted-foreground max-w-sm">
+              <span className="font-bold text-xl tracking-tight text-foreground group-hover:text-amber-600 transition-colors">
+                Sreeyan Developers
+              </span>
+            </Link>
+            <p className="text-muted-foreground leading-relaxed">
               Building dreams and creating lasting homes for first-time buyers. 
-              Your trusted partner in finding the perfect home.
+              Your trusted partner in finding the perfect home in Bangalore.
             </p>
-            <div className="flex space-x-4">
-              <Link href="https://www.facebook.com/share/18KMAGxb5o/" className="text-muted-foreground hover:text-amber-600 transition-colors">
+            <div className="flex items-center space-x-4">
+              <a 
+                href="https://www.facebook.com/share/18KMAGxb5o/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-background border border-border text-muted-foreground hover:text-blue-600 hover:border-blue-600 transition-all shadow-sm"
+              >
                 <Facebook className="w-5 h-5" />
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-amber-600 transition-colors">
-                <Twitter className="w-5 h-5" />
-              </Link>
-              <Link href="https://www.instagram.com/sreeyandevelopers25/" className="text-muted-foreground hover:text-amber-600 transition-colors">
+              </a>
+              <a 
+                href="https://wa.me/919844661119" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-background border border-border text-muted-foreground hover:text-green-600 hover:border-green-600 transition-all shadow-sm"
+              >
+                <FaWhatsapp className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.instagram.com/sreeyandevelopers25/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-background border border-border text-muted-foreground hover:text-pink-600 hover:border-pink-600 transition-all shadow-sm"
+              >
                 <Instagram className="w-5 h-5" />
-              </Link>
-            
+              </a>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="text-muted-foreground hover:text-amber-600 transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/projects" className="text-muted-foreground hover:text-amber-600 transition-colors">
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link href="/amenities" className="text-muted-foreground hover:text-amber-600 transition-colors">
-                  Amenities
-                </Link>
-              </li>
-              <li>
-                <Link href="/partner" className="text-muted-foreground hover:text-amber-600 transition-colors">
-                  Partner With Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-muted-foreground hover:text-amber-600 transition-colors">
-                  Contact
-                </Link>
-              </li>
+          <div className="space-y-6">
+            <h3 className="font-bold text-lg text-foreground underline underline-offset-8 decoration-amber-600/30">
+              Quick Links
+            </h3>
+            <ul className="space-y-3">
+              {[
+                { name: "About Us", href: "/about" },
+                { name: "Projects", href: "/projects" },
+                { name: "Amenities", href: "/amenities" },
+                { name: "Partner With Us", href: "/partner" },
+                { name: "Contact", href: "/contact" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href} 
+                    className="text-muted-foreground hover:text-amber-600 dark:hover:text-amber-500 transition-colors flex items-center group"
+                  >
+                    <span className="w-0 group-hover:w-4 overflow-hidden transition-all duration-300 text-amber-600">→</span>
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Projects */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Featured Projects</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/projects/royal-gardens" className="text-muted-foreground hover:text-amber-600 transition-colors">
-                  Royal Gardens
-                </Link>
-              </li>
-              <li>
-                <Link href="/projects/sunshine-villas" className="text-muted-foreground hover:text-amber-600 transition-colors">
-                  Sunshine Villas
-                </Link>
-              </li>
-              <li>
-                <Link href="/projects/metropolitan-homes" className="text-muted-foreground hover:text-amber-600 transition-colors">
-                  Metropolitan Homes
-                </Link>
-              </li>
-              <li>
-                <Link href="/projects/green-valley" className="text-muted-foreground hover:text-amber-600 transition-colors">
-                  Green Valley Estates
-                </Link>
-              </li>
+          {/* Featured Projects */}
+          <div className="space-y-6">
+            <h3 className="font-bold text-lg text-foreground underline underline-offset-8 decoration-amber-600/30">
+              Featured Projects
+            </h3>
+            <ul className="space-y-3">
+              {[
+                "Sreeyan Square",
+                "Sreeyan Serenity"
+              ].map((project) => (
+                <li key={project}>
+                  <Link 
+                    href={`/projects/${project.toLowerCase().replace(/ /g, '-')}`} 
+                    className="text-muted-foreground hover:text-amber-600 dark:hover:text-amber-500 transition-colors"
+                  >
+                    {project}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Contact Info</h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-amber-600" />
-                <span className="text-muted-foreground">+91 98765 43210</span>
+          <div className="space-y-6">
+            <h3 className="font-bold text-lg text-foreground underline underline-offset-8 decoration-amber-600/30">
+              Contact Info
+            </h3>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3 group">
+                <div className="p-2 rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-600 shrink-0 transition-colors group-hover:bg-amber-600 group-hover:text-white">
+                  <Phone className="w-4 h-4" />
+                </div>
+                <a href="tel:+919844661119" className="text-muted-foreground hover:text-foreground transition-colors">
+                  +91 98446 61119
+                </a>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-amber-600" />
-                <span className="text-muted-foreground">sreeyandevelopers@gmail.com</span>
+              <div className="flex items-center space-x-3 group">
+                <div className="p-2 rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-600 shrink-0 transition-colors group-hover:bg-amber-600 group-hover:text-white">
+                  <Mail className="w-4 h-4" />
+                </div>
+                <a href="mailto:sreeyandevelopers@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors break-all">
+                  sreeyandevelopers@gmail.com
+                </a>
               </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-amber-600 mt-1" />
-                <span className="text-muted-foreground">
-                  No. 189, 1ST FLOOR, CHAITRA SREE COMPLEX, NEAR VISHAL MART, K. NARAYANAPURA ROAD, KOTHANURU,<br />
-                   BANGALORE - 560 077,<br />
-                  Karnataka, India
-                </span>
+              <div className="flex items-start space-x-3 group">
+                <div className="p-2 rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-600 shrink-0 mt-1 transition-colors group-hover:bg-amber-600 group-hover:text-white">
+                  <MapPin className="w-4 h-4" />
+                </div>
+                <a 
+                  href="https://maps.google.com/?q=No.189,1ST+FLOOR,CHAITRA+SREE+COMPLEX,KOTHANURU,BANGALORE" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground transition-colors leading-relaxed"
+                >
+                No. 189, 1ST FLOOR, CHAITRA SREE COMPLEX, NEAR VISHAL MART, K. NARAYANAPURA ROAD, KOTHANURU, BANGALORE - 560 077
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t mt-8 pt-8 text-center">
-          <p className="text-muted-foreground">
-            © {new Date().getFullYear()} Sreeyan Developers. All rights reserved. | 
-            <Link href="/privacy" className="hover:text-amber-600 transition-colors ml-1">
-              Privacy Policy
-            </Link> | 
-            <Link href="/terms" className="hover:text-amber-600 transition-colors ml-1">
-              Terms of Service
-            </Link>
-          </p>
+        {/* Bottom Bar */}
+        <div className="border-t border-border mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-muted-foreground text-sm">
+              © {currentYear} Sreeyan Developers. All rights reserved.
+            </p>
+            <div className="flex items-center space-x-6 text-sm">
+              <Link href="/privacy" className="text-muted-foreground hover:text-amber-600 transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-muted-foreground hover:text-amber-600 transition-colors">
+                Terms of Service
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
