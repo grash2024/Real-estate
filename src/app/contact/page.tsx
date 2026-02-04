@@ -102,28 +102,28 @@ export default function ContactPage() {
 
   const teamContacts = [
     {
-      name: "Rahul Sharma",
+      name: "Vikram",
       position: "Sales Manager",
-      phone: "+91 9844661119",
-      email: "rahul@sreeyandevelopers.com",
+      phone: "+91 97436 611189",
+      email: "sreeyandevelopers@gmail.com",
     },
     {
-      name: "Priya Nair",
-      position: "Customer Relations",
-      phone: "+91 9844661119",
-      email: "priya@sreeyandevelopers.com",
-    },
-    {
-      name: "Amit Kumar",
+      name: "Raghava Naidu",
       position: "Project Consultant",
-      phone: "+91 9844661119",
-      email: "amit@sreeyandevelopers.com",
+      phone: "+91 9743881118",
+      email: "sreeyandevelopers@gmail.com",
     },
     {
-      name: "Sneha Reddy",
+      name: "Pratap",
+      position: "Team Member",
+      phone: "+91 9743991118",
+      email: "sreeyandevelopers@gmail.com",
+    },
+    {
+      name: "Sandeep",
       position: "Partnership Head",
-      phone: "+91 9844661119",
-      email: "sneha@sreeyandevelopers.com",
+      phone: "+91 9008416009",
+      email: "sreeyandevelopers@gmail.com",
     }
   ]
 

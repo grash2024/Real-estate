@@ -51,7 +51,7 @@ export default function PartnerPage() {
 };
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/919844661119", "_blank")
+    window.open("https://wa.me/919743881118", "_blank")
   }
 
   const partnershipTypes = [
@@ -307,7 +307,7 @@ export default function PartnerPage() {
           >
             <h2 className="text-3xl md:text-5xl font-black mb-8 tracking-tight">Ready to Build Together?</h2>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" variant="secondary" onClick={() => window.open("tel:+919844661119")} className="bg-white text-amber-700 hover:bg-amber-50 h-14 px-10 rounded-xl font-bold border-none">
+              <Button size="lg" variant="secondary" onClick={() => window.open("tel:+919743881118")} className="bg-white text-amber-700 hover:bg-amber-50 h-14 px-10 rounded-xl font-bold border-none">
                 Call Now
               </Button>
               <Button size="lg" className="bg-amber-800/40 hover:bg-amber-800 text-white border border-white/20 h-14 px-10 rounded-xl font-bold" onClick={handleWhatsAppClick}>

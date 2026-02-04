@@ -224,7 +224,8 @@ export default function AboutPage() {
                   size="lg"
                   variant="outline"
                   onClick={handleWhatsAppClick}
-                  className="border-white/40 text-white hover:bg-white/10 h-14 px-10 rounded-2xl font-bold backdrop-blur-sm"
+                  className="bg-white text-amber-700 dark:text-white hover:bg-amber-50 font-bold h-14 px-10 rounded-2xl shadow-lg transition-transform active:scale-95 border-none"
+                  
                 >
                   <MessageCircle className="mr-2 w-5 h-5" />
                   Chat on WhatsApp

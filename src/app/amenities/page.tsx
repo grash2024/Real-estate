@@ -25,11 +25,11 @@ import Link from "next/link"
 
 export default function AmenitiesPage() {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/919844661119", "_blank")
+    window.open("https://wa.me/919743661118", "_blank")
   }
 
   const handleCallClick = () => {
-    window.open("tel:+919844661119")
+    window.open("tel:+919743661118")
   }
 
   const leisureAmenities = [

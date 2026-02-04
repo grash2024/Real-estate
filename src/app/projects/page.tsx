@@ -26,6 +26,8 @@ import {
   Droplets,
   CheckCircle,
   ImageIcon,
+  Compass,
+  Hammer
 } from "lucide-react";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
@@ -35,7 +37,7 @@ export default function ProjectsPage() {
   const [selectedStatus, setSelectedStatus] = useState("all");
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/919844661119", "_blank");
+    window.open("https://wa.me/919743661118", "_blank");
   };
 
   const projects = [
@@ -46,16 +48,18 @@ export default function ProjectsPage() {
       price: "₹65 Lakhs - ₹95 Lakhs*",
       type: "apartment",
       status: "ongoing",
+      direction:"left",
       units: "2 & 3 BHK",
       area: "1100 - 1550 sq.ft.",
-      possession: "Dec 2025",
-      image: "/hero-banner1.jpg", // ADD YOUR IMAGE PATH HERE
+      possession: "April 2026",
+      image: "/hero-banner1.jpg", 
       description:
         "Our flagship residential tower featuring 115 premium units with 30% open space and modern amenities.",
       highlights: [
         "30% Open Area",
         "Swimming Pool",
         "Gymnasium",
+        "Car Parking",
         "Nagawara Metro Near",
         "24/7 Security",
         "Intercom Facility",
@@ -69,10 +73,11 @@ export default function ProjectsPage() {
       price: "₹45 Lakhs - ₹65 Lakhs*",
       type: "apartment",
       status: "ready",
+        direction:"right",
       units: "2 BHK",
       area: "950 - 1200 sq.ft.",
       possession: "Immediate",
-      image: "/hero-banner3.jpg", // ADD YOUR IMAGE PATH HERE
+      image: "/hero-banner3.jpg", 
       description:
         "Affordable luxury apartments in a peaceful neighborhood with excellent connectivity to Manyata Tech Park.",
       highlights: [
@@ -80,6 +85,7 @@ export default function ProjectsPage() {
         "Power Backup",
         "Covered Parking",
         "Lift Access",
+        "24/7 Security",
         "Secure Community",
         "Vaastu Compliant",
       ],
@@ -144,7 +150,7 @@ export default function ProjectsPage() {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Status</SelectItem>
-                <SelectItem value="ongoing">Under Construction</SelectItem>
+                <SelectItem value="ongoing">Ongoing Projects</SelectItem>
                 <SelectItem value="ready">Ready to Move</SelectItem>
               </SelectContent>
             </Select>
@@ -165,7 +171,6 @@ export default function ProjectsPage() {
                 viewport={{ once: true }}
               >
                 <Card className="overflow-hidden border-border bg-card shadow-sm hover:shadow-2xl transition-all duration-500 group rounded-[2.5rem]">
-                  {/* Image Container */}
                   <div className="relative h-72 overflow-hidden bg-muted">
                     {project.image ? (
                       <img
@@ -179,14 +184,12 @@ export default function ProjectsPage() {
                       </div>
                     )}
 
-                    {/* Status Badge */}
                     <Badge
-                      className={`absolute top-6 right-6 px-4 py-1.5 font-bold shadow-lg ${project.status === "ready" ? "bg-green-600" : "bg-amber-600"}`}
+                      className={`absolute top-4 ${project.direction}-4 px-4 py-1.5 font-bold shadow-lg ${project.status === "ready" ? "bg-green-600" : "bg-amber-600"}`}
                     >
                       {project.status === "ready" ? "Ready to Move" : "Ongoing"}
                     </Badge>
 
-                    {/* Dark Overlay on Hover */}
                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   </div>
 
@@ -274,6 +277,97 @@ export default function ProjectsPage() {
         </div>
       </section>
 
+      {/* NEW: Future Projects Sub-section */}
+      <section className="py-20 bg-muted/20 border-t border-border overflow-hidden">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <Badge className="bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-400 border-none mb-4 font-bold">
+              Coming Soon
+            </Badge>
+            <h2 className="text-3xl md:text-5xl font-black text-foreground mb-4">Future Horizons</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              We are actively planning new residential masterpieces in the high-growth corridors of North Bangalore.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-card border border-border p-10 rounded-[3rem] relative overflow-hidden group shadow-lg"
+            >
+              <div className="absolute top-0 right-0 p-10 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
+                <Compass className="w-48 h-48" />
+              </div>
+              
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 bg-amber-600 rounded-2xl flex items-center justify-center text-white">
+                  <Hammer className="w-7 h-7" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold">Master Planning</h3>
+                  <p className="text-amber-600 font-semibold tracking-widest text-[10px] uppercase">North Bangalore Expansion</p>
+                </div>
+              </div>
+              
+              <p className="text-muted-foreground leading-relaxed mb-8 italic">
+                "Our design and acquisition teams are currently finalizing blueprints for upcoming premium 
+                residencies designed for the modern lifestyle. Experience a blend of sustainable architecture 
+                and luxury in the near future."
+              </p>
+
+              <div className="space-y-4">
+                <div className="flex items-center gap-3 text-sm font-bold text-foreground">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  Strategic Locations Near Tech Hubs
+                </div>
+                <div className="flex items-center gap-3 text-sm font-bold text-foreground">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  Eco-Conscious Living Spaces
+                </div>
+                <div className="flex items-center gap-3 text-sm font-bold text-foreground">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  World-Class Recreational Facilities
+                </div>
+              </div>
+
+              <Button 
+                className="mt-10 bg-amber-600 hover:bg-amber-700 h-14 rounded-2xl w-full md:w-auto px-8"
+                onClick={handleWhatsAppClick}
+              >
+                Register Interest for Updates
+              </Button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative aspect-square md:aspect-video lg:aspect-square rounded-[3rem] overflow-hidden shadow-2xl"
+            >
+               <div className="absolute inset-0 bg-gradient-to-tr from-amber-600/20 to-transparent z-10" />
+               <img 
+                 src="/hero-banner2.jpg" 
+                 alt="Future Planning" 
+                 className="w-full h-full object-cover grayscale opacity-60 dark:opacity-40" 
+               />
+               <div className="absolute inset-0 flex items-center justify-center z-20">
+                  <div className="text-center p-8 bg-background/80 backdrop-blur-md rounded-3xl border border-white/20 shadow-2xl">
+                    <p className="text-amber-600 font-black text-4xl mb-2 tracking-tighter">PLANNING PHASE</p>
+                    <p className="text-xs uppercase font-bold tracking-[0.3em] text-muted-foreground">More Details Releasing Soon</p>
+                  </div>
+               </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Trust Banner */}
       <section className="py-20 bg-muted/30 dark:bg-muted/10 border-y border-border">
         <div className="container mx-auto px-4">
@@ -340,16 +434,11 @@ export default function ProjectsPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="h-16 px-10 rounded-2xl font-bold text-lg backdrop-blur-md 
-             /* Light Mode: White contrast on Amber */
-             border-white/40 text-white hover:bg-white hover:text-amber-600 
-             /* Dark Mode: Soft white contrast on Dark Amber */
-             dark:border-white/20 dark:text-white dark:hover:bg-white dark:hover:text-amber-700 
-             transition-all shadow-xl active:scale-95 group"
+                className="h-16 px-10 rounded-2xl font-bold text-lg backdrop-blur-sm border-amber-600 text-amber-600 active:bg-amber-500  dark:border-amber-500 dark:text-amber-500 dark:hover:bg-amber-500 dark:hover:text-background transition-all"
                 onClick={handleWhatsAppClick}
               >
-                <FaWhatsapp className="mr-2 w-6 h-6 transition-transform group-hover:scale-110" />
-                WhatsApp Brochure
+                <FaWhatsapp className="mr-2 w-6 h-6" />
+                WhatsApp Us
               </Button>
             </div>
           </motion.div>

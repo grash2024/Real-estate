@@ -1,14 +1,20 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { Menu, Phone } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
-import { FaWhatsapp } from "react-icons/fa"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { Menu, Phone } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -17,29 +23,29 @@ const navigation = [
   { name: "Amenities", href: "/amenities" },
   { name: "Partner With Us", href: "/partner" },
   { name: "Contact", href: "/contact" },
-]
+];
 
 export function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
       // Set to true after 20px of scroll for a smoother transition
-      setScrolled(window.scrollY > 20)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/919844661119", "_blank")
-  }
+    window.open("https://wa.me/919844661119", "_blank");
+  };
 
   const handleCallClick = () => {
-    window.location.href = "tel:+919844661119"
-  }
+    window.location.href = "tel:+919844661119";
+  };
 
   return (
     <>
@@ -56,17 +62,28 @@ export function Navigation() {
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14 md:h-16">
             {/* Logo Section */}
-            <Link href="/" className="flex items-center space-x-3 group shrink-0">
-              <div className="relative">
-                <img 
-                  src="/logo.jpeg" 
-                  alt="Sreeyan Developers Logo" 
-                  className="w-10 h-10 rounded-lg object-cover ring-1 ring-border group-hover:ring-amber-600 transition-all"
+            <Link
+              href="/"
+              className="flex items-center space-x-3 group shrink-0"
+            >
+              <div className="relative w-12 h-12 rounded-xl overflow-hidden ring-1 ring-border group-hover:ring-amber-600 transition-all bg-white dark:bg-white/90 p-1">
+                <img
+                  src="/refined-logo.png"
+                  alt="Sreeyan Developers Logo"
+                  className="w-full h-full object-contain"
                 />
               </div>
-              <span className="font-bold text-lg md:text-xl tracking-tight text-foreground group-hover:text-amber-600 transition-colors">
-                Sreeyan Developers
-              </span>
+              <div className="flex flex-col -space-y-1">
+                {/* Main Title */}
+                <span className="font-black text-lg md:text-xl tracking-tight text-foreground group-hover:text-amber-600 transition-colors uppercase p-1">
+                  Sreeyan Developers
+                </span>
+
+                {/* Tagline */}
+                <span className="text-[10px] md:text-[12px] font-extrabold text-amber-600 dark:text-amber-500 tracking-[0.3em] uppercase pl-0.5">
+                  Live Life In Luxury
+                </span>
+              </div>
             </Link>
 
             {/* Desktop Navigation Links */}
@@ -83,7 +100,7 @@ export function Navigation() {
                 >
                   {item.name}
                   {pathname === item.href && (
-                    <motion.div 
+                    <motion.div
                       layoutId="nav-underline"
                       className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-600"
                     />
@@ -119,15 +136,24 @@ export function Navigation() {
               <ThemeToggle />
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="text-foreground hover:bg-muted">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="text-foreground hover:bg-muted"
+                  >
                     <Menu className="h-6 w-6" />
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="right" className="w-[85%] border-l border-border bg-background p-0">
+                <SheetContent
+                  side="right"
+                  className="w-[85%] border-l border-border bg-background p-0"
+                >
                   <SheetHeader className="p-6 text-left border-b border-border">
-                    <SheetTitle className="text-amber-600 font-bold text-xl">Menu</SheetTitle>
+                    <SheetTitle className="text-amber-600 font-bold text-xl">
+                      Menu
+                    </SheetTitle>
                   </SheetHeader>
-                  
+
                   <div className="flex flex-col p-4 space-y-2">
                     {navigation.map((item) => (
                       <Link
@@ -146,7 +172,9 @@ export function Navigation() {
                   </div>
 
                   <div className="absolute bottom-8 left-0 right-0 px-6 space-y-4">
-                    <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.2em] mb-2 text-center">Contact Us</p>
+                    <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.2em] mb-2 text-center">
+                      Contact Us
+                    </p>
                     <div className="grid grid-cols-2 gap-3">
                       <Button
                         variant="outline"
@@ -196,5 +224,5 @@ export function Navigation() {
         </div>
       </AnimatePresence>
     </>
-  )
+  );
 }

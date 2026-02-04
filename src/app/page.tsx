@@ -134,7 +134,7 @@ const featuredProjects = [
   }, [heroSlides.length]);
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/919844661119", "_blank");
+    window.open("https://wa.me/919743661118", "_blank");
   };
 
   const handleCallClick = () => {
@@ -304,7 +304,7 @@ const featuredProjects = [
                       alt={project.name}
                       className="w-full h-48 object-cover"
                     />
-                    <Badge className="absolute top-4 right-4 bg-amber-600">
+                    <Badge className="absolute top-1 right-4 bg-amber-600">
                       {project.status}
                     </Badge>
                   </div>
