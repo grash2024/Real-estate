@@ -70,7 +70,7 @@ export function Navigation() {
                 <img
                   src="/refined-logo.png"
                   alt="Sreeyan Developers Logo"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-scale-down"
                 />
               </div>
               <div className="flex flex-col -space-y-1">
