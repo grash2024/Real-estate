@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   keywords: ["Sreeyan Developers", "Real Estate", "Bangalore", "Homes", "Apartments", "Villas", "First Time Buyers", "Property"],
   authors: [{ name: "Sreeyan Developers Team" }],
   icons: {
-    icon: "/refined-logo.png",
+    icon: "/refined-logo.jpeg",
   },
   openGraph: {
     title: "Sreeyan Developers - Premium Real Estate Developers",

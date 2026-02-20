@@ -66,13 +66,13 @@ export function Navigation() {
               href="/"
               className="flex items-center space-x-3 group shrink-0"
             >
-              <div className="relative w-12 h-12 rounded-xl overflow-hidden ring-1 ring-border group-hover:ring-amber-600 transition-all bg-white dark:bg-white/90 p-1">
-                <img
-                  src="/refined-logo.png"
-                  alt="Sreeyan Developers Logo"
-                  className="w-full h-full object-scale-down"
-                />
-              </div>
+             <div className="relative w-12 h-12 rounded-xl overflow-hidden ring-1 ring-border group-hover:ring-amber-600 transition-all bg-white dark:bg-white/90">
+  <img
+    src="/refined-logo.jpeg"
+    alt="Sreeyan Developers Logo"
+    className="w-full h-full object-cover"
+  />
+</div>
               <div className="flex flex-col -space-y-1">
                 {/* Main Title */}
                 <span className="font-black text-lg md:text-xl tracking-tight text-foreground group-hover:text-amber-600 transition-colors uppercase p-1">
@@ -80,9 +80,7 @@ export function Navigation() {
                 </span>
 
                 {/* Tagline */}
-                <span className="text-[10px] md:text-[12px] font-extrabold text-amber-600 dark:text-amber-500 tracking-[0.3em] uppercase pl-0.5">
-                  Live Life In Luxury
-                </span>
+               
               </div>
             </Link>
 

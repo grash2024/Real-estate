@@ -23,7 +23,7 @@ export function Footer() {
             <Link href="/" className="flex items-center space-x-3 group">
              <div className="relative w-12 h-12 rounded-xl overflow-hidden ring-1 ring-border group-hover:ring-amber-600 transition-all bg-white dark:bg-white/90 p-1">
                 <img
-                  src="/refined-logo.png"
+                  src="/refined-logo.jpeg"
                   alt="Sreeyan Developers Logo"
                   className="w-full h-full object-contain"
                 />
@@ -35,9 +35,7 @@ export function Footer() {
                 </span>
 
                 {/* Tagline */}
-                <span className="text-[10px] md:text-[12px] font-extrabold text-amber-600 dark:text-amber-500 tracking-[0.3em] uppercase pl-0.5">
-                  Live Life In Luxury
-                </span>
+               
               </div>
             </Link>
             <p className="text-muted-foreground leading-relaxed">
@@ -166,27 +164,45 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-muted-foreground text-sm">
-              © {currentYear} Sreeyan Developers. All rights reserved.
-            </p>
-            <div className="flex items-center space-x-6 text-sm">
-              <Link
-                href="/privacy"
-                className="text-muted-foreground hover:text-amber-600 transition-colors"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/terms"
-                className="text-muted-foreground hover:text-amber-600 transition-colors"
-              >
-                Terms of Service
-              </Link>
-            </div>
-          </div>
-        </div>
+       <div className="border-t border-border mt-12 pt-8">
+  <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6">
+    
+    {/* Left Section */}
+    <div className="text-center md:text-left text-sm text-muted-foreground">
+      <p>
+        © {currentYear} Sreeyan Developers. All rights reserved.
+      </p>
+      <p className="mt-1">
+       Crafted by {" "}
+        <a
+          href="https://solveitbytech.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-amber-600 hover:underline"
+        >
+          Solveitbytech
+        </a>
+      </p>
+    </div>
+
+    {/* Right Section */}
+    <div className="flex justify-center md:justify-end gap-6 text-sm">
+      <Link
+        href="/privacy"
+        className="text-muted-foreground hover:text-amber-600 transition-colors"
+      >
+        Privacy Policy
+      </Link>
+      <Link
+        href="/terms"
+        className="text-muted-foreground hover:text-amber-600 transition-colors"
+      >
+        Terms of Service
+      </Link>
+    </div>
+
+  </div>
+</div>
       </div>
     </footer>
   );
